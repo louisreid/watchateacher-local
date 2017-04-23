@@ -1,0 +1,9 @@
+/*
+ * CSS used to hide comments form
+ */
+.gocha-comment-form,
+.comment-respond,
+#respond,
+#comments {
+    display: none;
+}

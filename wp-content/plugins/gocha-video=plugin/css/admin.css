@@ -1,0 +1,68 @@
+/*
+ * GOCHA Video Plugin - back-end CSS code
+ */
+
+#gocha-video-plugin select {
+    max-width: 100%;
+}
+
+#gocha-video-plugin p.submit {
+    float: left;
+}
+
+#gocha-video-plugin h1 {
+ 	margin: 24px 0;
+}
+
+/*
+ * Options lists
+ */
+#gocha-video-plugin .form-table th > h2 {
+	margin: 0;
+}
+
+#gocha-video-plugin .form-table tr.separator th,
+#gocha-video-plugin .form-table tr.separator td {
+	border: 1px solid #ccc;
+	border-right: none;
+	padding: 10px;
+	background: #fff;
+	font-size: 12px;
+}
+
+#gocha-video-plugin .form-table tr.separator td {
+	border-left: none;
+	border-right: 1px solid #ccc;
+	font-size: 14px;
+}
+
+#gocha-video-plugin .form-table tr.separator td {
+	padding: 10px;
+}
+
+#gocha-video-plugin .form-table tr.separator + tr th,
+#gocha-video-plugin .form-table tr.separator + tr td {
+	padding-top: 40px;
+}
+
+#gocha-video-plugin .small-text,
+#gocha-video-plugin .long-text,
+#gocha-video-plugin .regular-text {
+	border: 1px solid #ddd;
+}
+
+#gocha-video-plugin .long-text {
+    width: 100%;
+}
+
+#gocha-video-plugin .text-right {
+	text-align: right;
+}
+
+#gocha-video-plugin .error-message {
+    margin-left: 5px;
+}
+
+#gocha-video-plugin .error-message .dashicons-warning {
+    margin-top: 4px;
+}

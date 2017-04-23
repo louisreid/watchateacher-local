@@ -1,0 +1,409 @@
+# Copyright (C) 2016 gocha-video-plugin
+# This file is distributed under the same license as the gocha-video-plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: gocha-video-plugin\n"
+"Report-Msgid-Bugs-To: http://gochadesign.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Gochadesign <info@gochadesign.com>\n"
+"Language-Team: Gochadesign <info@gochadesign.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: inc/class-plugin.php:104, inc/class-plugin.php:250
+msgid "Start"
+msgstr ""
+
+#: inc/class-plugin.php:105
+msgid "Set current"
+msgstr ""
+
+#: inc/class-plugin.php:106, inc/class-plugin.php:252
+msgid "Set comment start time"
+msgstr ""
+
+#: inc/class-plugin.php:107
+msgid "Add comment at this point"
+msgstr ""
+
+#: inc/class-plugin.php:108, inc/class-plugin.php:251
+msgid "End"
+msgstr ""
+
+#: inc/class-plugin.php:109, inc/class-plugin.php:256
+msgid "Show comments"
+msgstr ""
+
+#: inc/class-plugin.php:110, inc/class-plugin.php:261
+msgid "Time"
+msgstr ""
+
+#: inc/class-plugin.php:111
+msgid "No comments"
+msgstr ""
+
+#: inc/class-plugin.php:147, inc/class-plugin.php:148, inc/settings.php:23
+msgid "GOCHA Video Plugin"
+msgstr ""
+
+#: inc/class-plugin.php:246, inc/class-plugin.php:497
+msgid "Reply"
+msgstr ""
+
+#: inc/class-plugin.php:247, inc/views/form.php:17
+msgid "Cancel reply"
+msgstr ""
+
+#: inc/class-plugin.php:248
+msgid "Add comment"
+msgstr ""
+
+#: inc/class-plugin.php:249
+msgid "Add reply"
+msgstr ""
+
+#: inc/class-plugin.php:254
+msgid "Show form"
+msgstr ""
+
+#: inc/class-plugin.php:255
+msgid "Hide form"
+msgstr ""
+
+#: inc/class-plugin.php:257
+msgid "Hide comments"
+msgstr ""
+
+#: inc/class-plugin.php:258
+msgid "Set comment end time"
+msgstr ""
+
+#: inc/class-plugin.php:259
+msgid "Dynamic"
+msgstr ""
+
+#: inc/class-plugin.php:260
+msgid "All"
+msgstr ""
+
+#: inc/class-plugin.php:262
+msgid "You might have left one of the fields blank, or be posting too quickly."
+msgstr ""
+
+#: inc/class-plugin.php:263
+msgid "Thanks for your comment. We appreciate your response."
+msgstr ""
+
+#: inc/class-plugin.php:264
+msgid "Please wait a while before posting your next comment."
+msgstr ""
+
+#: inc/class-plugin.php:265
+msgid "Processing..."
+msgstr ""
+
+#: inc/class-plugin.php:266
+msgid "Check form and fills all needed fields - comment may be too short. Please also check if your session did not expired."
+msgstr ""
+
+#: inc/class-plugin.php:267
+msgid "Please wait when the video will start."
+msgstr ""
+
+#: inc/class-plugin.php:288
+msgid "WARNING! This action will completly remove your current settings and presets. Do you want to do it?"
+msgstr ""
+
+#: inc/class-plugin.php:289
+msgid "Restoration failed. Please try again."
+msgstr ""
+
+#: inc/class-plugin.php:464
+msgid "No comments at this time range"
+msgstr ""
+
+#: inc/class-plugin.php:485
+msgid "Commented on: %s"
+msgstr ""
+
+#: inc/class-plugin.php:487, inc/class-plugin.php:550
+msgid "Commented on: %s to %s"
+msgstr ""
+
+#: inc/class-plugin.php:515
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: inc/settings.php:30
+msgid "Basic settings"
+msgstr ""
+
+#: inc/settings.php:31
+msgid "Basic configuration options for the plugin"
+msgstr ""
+
+#: inc/settings.php:36, inc/vc-integration/popup.php:38, inc/views/popup.php:59
+msgid "Comments mode"
+msgstr ""
+
+#: inc/settings.php:39, inc/vc-integration/popup.php:43, inc/views/popup.php:62
+msgid "Comments for a specific time range of video"
+msgstr ""
+
+#: inc/settings.php:40, inc/vc-integration/popup.php:44, inc/views/popup.php:63
+msgid "Comments for a specific point of video"
+msgstr ""
+
+#: inc/settings.php:46, inc/vc-integration/popup.php:50, inc/views/popup.php:69
+msgid "Maximum time for comment grouping"
+msgstr ""
+
+#: inc/settings.php:54, inc/views/popup.php:77
+msgid "Set the maximum video time period where comments are grouped. Thanks to this, it is convenient to dicuss certain and crucial moments in one place."
+msgstr ""
+
+#: inc/settings.php:61, inc/views/popup.php:84
+msgid "Check this to hide WordPress default comment form (it depends on theme preferences)."
+msgstr ""
+
+#: inc/settings.php:68, inc/views/popup.php:91
+msgid "Check this to hide comments timeline."
+msgstr ""
+
+#: inc/settings.php:75, inc/views/popup.php:98
+msgid "Check this to show comments based on current player time."
+msgstr ""
+
+#: inc/settings.php:87, inc/vc-integration/popup.php:91, inc/views/popup.php:110
+msgid "Decrease opacity of inactive comments"
+msgstr ""
+
+#: inc/settings.php:88, inc/vc-integration/popup.php:92, inc/views/popup.php:111
+msgid "Hide inactive comments"
+msgstr ""
+
+#: inc/settings.php:100, inc/views/popup.php:123
+msgid "Check this to open comments after each video as default."
+msgstr ""
+
+#: inc/settings.php:105, inc/vc-integration/popup.php:111, inc/views/popup.php:128
+msgid "Comments order"
+msgstr ""
+
+#: inc/settings.php:108, inc/vc-integration/popup.php:114, inc/views/popup.php:131
+msgid "Ascending"
+msgstr ""
+
+#: inc/settings.php:109, inc/vc-integration/popup.php:115, inc/views/popup.php:132
+msgid "Descending"
+msgstr ""
+
+#: inc/settings.php:115
+msgid "Include or exclude posts/pages?"
+msgstr ""
+
+#: inc/settings.php:118
+msgid "Exclude"
+msgstr ""
+
+#: inc/settings.php:119
+msgid "Include"
+msgstr ""
+
+#: inc/settings.php:121
+msgid "In the include mode - comments for videos will be available only on the selected posts/pages. Exclude mode will disable comments for videos on the selected posts/pages. Changes will be visible after saving the settings."
+msgstr ""
+
+#: inc/settings.php:126
+msgid "Included/excluded posts/pages"
+msgstr ""
+
+#: inc/settings.php:128
+msgid "Posts/Pages IDs separated by comma. Changes will be visible after saving the settings."
+msgstr ""
+
+#: inc/settings.php:135
+msgid "Services settings"
+msgstr ""
+
+#: inc/settings.php:136
+msgid "Services configuration options for the plugin"
+msgstr ""
+
+#: inc/settings.php:141
+msgid "Mode"
+msgstr ""
+
+#: inc/settings.php:144
+msgid "Parse embed videos and shortcodes"
+msgstr ""
+
+#: inc/settings.php:145
+msgid "Only shortcodes"
+msgstr ""
+
+#: inc/settings.php:153
+msgid "Check this to skip YouTube videos by plugin"
+msgstr ""
+
+#: inc/settings.php:164
+msgid "Check this to skip Vimeo videos by plugin"
+msgstr ""
+
+#: inc/settings.php:175
+msgid "Check this to skip dailymotion videos by plugin"
+msgstr ""
+
+#: inc/settings.php:186
+msgid "Check this to skip FB videos by plugin"
+msgstr ""
+
+#: inc/settings.php:197
+msgid "Check this to skip Google Drive videos by plugin"
+msgstr ""
+
+#: inc/settings.php:208
+msgid "Check this to skip embed videos by plugin"
+msgstr ""
+
+#: inc/settings.php:219
+msgid "Visual settings"
+msgstr ""
+
+#: inc/settings.php:220
+msgid "Visual configuration options for the plugin"
+msgstr ""
+
+#: inc/settings.php:225
+msgid "Color 1"
+msgstr ""
+
+#: inc/settings.php:232
+msgid "Color 2"
+msgstr ""
+
+#: inc/settings.php:239
+msgid "Color 3"
+msgstr ""
+
+#: inc/settings.php:248
+msgid "Advanced settings"
+msgstr ""
+
+#: inc/settings.php:249
+msgid "Advanced configuration options for the plugin"
+msgstr ""
+
+#: inc/settings.php:266
+msgid "Save Changes"
+msgstr ""
+
+#: inc/settings.php:273
+msgid "An error occured during saving settings - please try again."
+msgstr ""
+
+#: inc/vc-integration/popup.php:23
+msgid "GOCHA Video"
+msgstr ""
+
+#: inc/vc-integration/popup.php:25
+msgid "GOCHA"
+msgstr ""
+
+#: inc/vc-integration/popup.php:30, inc/views/popup.php:41
+msgid "Video URL"
+msgstr ""
+
+#: inc/vc-integration/popup.php:34
+msgid "Video"
+msgstr ""
+
+#: inc/vc-integration/popup.php:46, inc/vc-integration/popup.php:54, inc/vc-integration/popup.php:62, inc/vc-integration/popup.php:70, inc/vc-integration/popup.php:78, inc/vc-integration/popup.php:94, inc/vc-integration/popup.php:106, inc/vc-integration/popup.php:118
+msgid "Comments"
+msgstr ""
+
+#: inc/vc-integration/popup.php:59
+msgid "Hide default form"
+msgstr ""
+
+#: inc/vc-integration/popup.php:67
+msgid "Hide timeline"
+msgstr ""
+
+#: inc/vc-integration/popup.php:75
+msgid "Dynamic comments"
+msgstr ""
+
+#: inc/vc-integration/popup.php:87
+msgid "Comments highlight display"
+msgstr ""
+
+#: inc/vc-integration/popup.php:103
+msgid "Open comments"
+msgstr ""
+
+#: inc/views/comments.php:58
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/views/form.php:20
+msgid "Leave a reply"
+msgstr ""
+
+#: inc/views/form.php:33
+msgid "Name"
+msgstr ""
+
+#: inc/views/form.php:45
+msgid "Email"
+msgstr ""
+
+#: inc/views/form.php:57
+msgid "Website"
+msgstr ""
+
+#: inc/views/form.php:69
+msgid "Message*"
+msgstr ""
+
+#: inc/views/form.php:75
+msgid "submit"
+msgstr ""
+
+#: inc/views/popup.php:20
+msgid "Edit video shortcode"
+msgstr ""
+
+#: inc/views/popup.php:20
+msgid "Insert video shortcode"
+msgstr ""
+
+#: inc/views/popup.php:27
+msgid "Video settings"
+msgstr ""
+
+#: inc/views/popup.php:36
+msgid "<h2>URL examples:</h2><strong>YouTube:</strong> <span>https://www.youtube.com/watch?v=XXXXXXXXXXX</span><br><strong>Vimeo:</strong> <span>https://player.vimeo.com/video/XXXXXXXXXX</span><br><strong>Google Drive:</strong> <span>https://drive.google.com/file/d/XXXXXXXXXXXXXXX/preview</span><br><strong>dailymotion:</strong> <span>https://www.dailymotion.com/embed/video/XXXXXXXXXXX</span><br><strong>Facebook Videos:</strong> <span>https://www.facebook.com/facebook/videos/XXXXXXXXXXXX/</span>"
+msgstr ""
+
+#: inc/views/popup.php:49
+msgid "Comments settings"
+msgstr ""
+
+#: inc/views/popup.php:142
+msgid "Cancel"
+msgstr ""
+
+#: inc/views/popup.php:145
+msgid "Modify"
+msgstr ""
+
+#: inc/views/popup.php:145
+msgid "Insert"
+msgstr ""

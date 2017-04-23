@@ -1,0 +1,680 @@
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gocha-dynamic-seeker {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    height: 6px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin: 0 auto;
+    position: relative;
+    width: 99%;
+}
+
+.gocha-dynamic-seeker .gocha-bar {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    bottom: 0;
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    z-index: 2;
+}
+
+.gocha-dynamic-seeker .gocha-bar .gocha-bar-time {
+    position: absolute;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 8px;
+    font-weight: bold;
+    height: 12px;
+    right: 0;
+    text-align: center;
+    top: 50%;
+    transform: translate(50%, -50%);
+    width: 12px;
+}
+
+.gocha-dynamic-seeker:hover .gocha-bar .gocha-bar-time {
+    opacity: 1;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.gocha-dynamic-seeker .gocha-marker {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 0 0 3px 3px;
+    bottom: -24px;
+    cursor: pointer;
+    height: 24px;
+    left: 30%;
+    position: absolute;
+    text-align: center;
+    width: 24px;
+}
+
+.gocha-dynamic-seeker .gocha-marker span {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 15px;
+    padding: 4px;
+}
+
+.gocha-dynamic-seeker .gocha-marker.g-active {
+    border-radius: 3px;
+    bottom: 4px;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
+.gocha-dynamic-seeker .gocha-marker.g-active span {
+    border-radius: 3px;
+    display: block;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    left: 0;
+    line-height: 15px;
+    transform: translate3d(0, -34%, 0);
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.gocha-video-commentarea .gocha-video-comment-anchor {
+    display: none
+}
+
+.gocha-video-commentarea iframe,
+.gocha-video-commentarea video,
+.gocha-video-commentarea .wp-video,
+.gocha-video-commentarea .flowplayer {
+    margin-bottom: 0!important;
+    width: 100% !important;
+}
+
+.gocha-video-commentarea .gocha-video-controls {
+    min-height: 40px;
+    padding: 0;
+}
+
+.gocha-video-commentarea .gocha-video-controls:after {
+    clear: both;
+    content: ' ';
+    display: block;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area {
+    border: none;
+    display: inline-block;
+    float: left;
+    font-size: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 75%;
+}
+
+.gocha-video-commentarea .gocha-video-controls[data-mode="point"] .gocha-video-add-area {
+    width: 32%
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border: none;
+    display: inline-block;
+    float: left;
+    font-size: 9px;
+    font-weight: bold;
+    height: 46px;
+    line-height: 1em;
+    position: relative;
+    text-transform: uppercase;
+    width: 40%;
+    z-index: 1;
+}
+
+.gocha-video-commentarea .gocha-video-controls[data-mode="point"] .gocha-video-add-area button.gocha-video-add {
+    width: 100%
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add.gocha-video-add-active {
+    position: absolute;
+    z-index: 4;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add.gocha-start-button:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 23px 23px 0;
+    transform: rotate(360deg);
+    position: absolute;
+    left: -23px;
+    top: 0;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add.gocha-stop-button:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 0 23px 23px;
+    transform: rotate(360deg);
+    position: absolute;
+    right: -23px;
+    top: 0;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st {
+    display: inline-block;
+    float: left;
+    height: 46px;
+    position: relative;
+    text-align: center;
+    width: 30%;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimenumber {
+    display: inline-block;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 36px;
+    width: 100%;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimetitle {
+    bottom: 0;
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    left: 0;
+    line-height: 14px;
+    position: absolute;
+    width: 100%;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimechange {
+    display: none;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 49px;
+    width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st:hover .gtimechange {
+    display: inline-block
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st:hover .gtimetitle,
+.gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st:hover .gtimenumber {
+    display: none
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-show {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 0px;
+    border: none;
+    display: inline-block;
+    float: left;
+    font-size: 9px;
+    font-weight: bold;
+    height: 46px;
+    margin: 0;
+    padding: 12px 6px;
+    position: relative;
+    text-transform: uppercase;
+    width: 25%;
+    word-break: break-all;
+    z-index: 2;
+}
+
+.gocha-video-commentarea .gocha-video-controls[data-mode="point"] .gocha-video-show {
+    float: right;
+    width: 32%;
+}
+
+.gocha-video-commentarea .gocha-video-controls .gocha-video-comment-close {
+    display: block;
+    font-size: 11px;
+    padding-bottom: 0;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gocha-video-commentarea .gocha-video-bar-area {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding: 30px 10px;
+    position: relative;
+}
+
+.gocha-video-commentarea .gocha-video-bar-area:before {
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.gocha-video-commentarea .gocha-video-bar-area:after {
+    bottom: -2px;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.gocha-video-commentarea .gocha-video-commentform {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 5px;
+}
+
+.gocha-video-commentarea .gocha-video-commentform form {
+    margin: 0 auto;
+    width: 99%;
+}
+
+.gocha-video-commentarea .gocha-video-commentform form textarea {
+    width: 100% !important
+}
+
+.gocha-video-commentarea .gocha-video-commentform h2 {
+    padding-top: 15px
+}
+
+.gocha-video-commentarea .gocha-video-commentform .gocha-cancel-reply {
+    float: right
+}
+
+.gocha-video-commentarea .gocha-video-commentform fieldset {
+    border: none;
+}
+
+.gocha-video-commentarea .gocha-video-commentform.gocha-open {
+    max-height: 700px
+}
+
+.gocha-video-commentarea .gocha-video-commentbox {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    max-height: 0px;
+    overflow: auto;
+    padding: 0 10px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox.gocha-open {
+    max-height: 10000px
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: none !important;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment.gvc-show {
+    display: block !important
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-placeholder {
+    display: none;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox ul,
+.gocha-video-commentarea .gocha-video-commentbox ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox ul ul,
+.gocha-video-commentarea .gocha-video-commentbox ol ul {
+    padding-left: 20px
+}
+
+.gocha-video-commentarea .gocha-video-commentbox > ul {
+    margin-top: 10px
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment-all,
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment-dynamic {
+    float: right;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-time {
+    float: left;
+    margin-left: 5px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-video-replay-link {
+    float: right;
+    font-size: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    padding: 0 5px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-avatar {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    border-radius: 50% !important;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    float: left;
+    height: auto;
+    left: 10px;
+    padding: 1px;
+    position: absolute;
+    top: 7px;
+    border-style: solid;
+    border-width: 4px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-avatar img {
+    border-radius: 50% !important;
+    float: left;
+    height: 48px;
+    line-height: 1;
+    margin: 0;
+    width: 48px;
+    z-index: 2;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 0 5px 10px 80px;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text:before {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    content: " ";
+    display: block;
+    height: 0;
+    margin-top: -10px;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    width: 0;
+    z-index: 2;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta {
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-video-comment-start {
+    float: right;
+    font-size: 12px;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 5px;
+}
+
+.gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-video-description {
+    text-align: left
+}
+
+.gocha-video-comment-anchor.gvp-default-list {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    font-size: 12px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.clearfix-sm {
+    display: none
+}
+
+/* Responsive videos */
+.gocha-video-player-wrapper {
+    position: relative;
+}
+
+.gocha-video-player-wrapper > iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area {
+        width: 75%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add {
+        width: 30%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add.gocha-start-button:before {
+        border-width: 23px 6px 23px 0;
+        left: -6px;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button.gocha-video-add.gocha-stop-button:after {
+        border-width: 23px 0 23px 6px;
+        right: -6px;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st {
+        float: left;
+        width: 35%;
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+    .clearfix-sm {
+        clear: both;
+        display: block;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area {
+        width: 100%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button {
+        width: 30%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st {
+        float: left;
+        width: 35%;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimenumber {
+        font-size: 22px
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-show {
+        display: block;
+        float: none;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        top: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area {
+        width: 100%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area button {
+        width: 30%
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st {
+        float: left;
+        width: 35%;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimenumber {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .gocha-video-commentarea .gocha-video-controls .gocha-video-add-area .gocha-video-st .gtimetitle {
+        display: none
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-avatar {
+        float: none;
+        height: 75px;
+        margin: 10px auto;
+        padding: 0;
+        position: static;
+        width: 75px;
+        z-index: 2;
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-avatar img {
+        float: none;
+        height: 67px;
+        width: 67px;
+        padding: 0;
+        margin: 0;
+        max-width: 67px;
+        position: absolute;
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text {
+        margin: 0
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-autor {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-dash {
+        display: none
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-time {
+        display: block;
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-video-replay-link {
+        display: block;
+        float: none;
+        font-size: 22px;
+        padding: 10px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .gocha-video-commentarea .gocha-video-commentbox .gocha-video-comment .gocha-comment-text .gocha-meta .gocha-video-comment-start {
+        display: block;
+        float: none;
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .gocha-comment-text .children {
+        padding-left: 30px
+    }
+}
