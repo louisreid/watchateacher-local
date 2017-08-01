@@ -59,7 +59,8 @@ gulp.task('scripts', function() {
   gulp.src([
     basePaths.dev + 'js/bootstrap3/bootstrap.min.js',  //<--------- Change from /bootstrap3 to /bootstrap4 Watch out! just for testing in the moment!
     basePaths.dev + 'js/owl.carousel.min.js', 
-    basePaths.dev + 'js/skip-link-focus-fix.js'
+    basePaths.dev + 'js/skip-link-focus-fix.js',
+    basePaths.dev + 'js/watchateacher.js'
     ])
     .pipe(concat('theme.min.js'))
     .pipe(uglify())

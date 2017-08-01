@@ -8,33 +8,26 @@
  */
 ?>
 
-<?php get_sidebar('footerfull'); ?>
 
-<div class="wrapper" id="wrapper-footer">
-    
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-12">
-    
-                <footer id="colophon" class="site-footer" role="contentinfo">
-
-                    <div class="site-info">
-                    <small><i>Footer Content</i></small>
-                    </div><!-- .site-info -->
-
-                </footer><!-- #colophon -->
-
-            </div><!--col end -->
-
-        </div><!-- row end -->
-        
-    </div><!-- container end -->
-    
-</div><!-- wrapper end -->
 
 </div><!-- #page -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 Watch A Teacher. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
 <?php wp_footer(); ?>
 

@@ -22,7 +22,8 @@ get_header(); ?>
                     <?php
                       wp_reset_postdata();
                       $logged_in_user = wp_get_current_user();
-                      $logged_in_user = $logged_in_user->nickname;
+                      $logged_in_user = $logged_in_user->user_nicename;
+
                       $args = array(
                           'post_type' => 'session',
                           'tax_query' => array(
@@ -32,32 +33,7 @@ get_header(); ?>
                               'terms' => $logged_in_user
                               )
                             )
-                          // 'meta_key' => 'coach',
-                          // 'meta_query' => array(
-                          //     array(
-                          //         'key' => 'coach_post',
-                          //         // 'value' => $logged_in_user,
-                          //         // 'value' => serialize('coach_test'),
-                          //         // 'value' => '"'."coach_test".'"',
-                          //         // 'compare' => 'IN',
-                          //         // 'compare' => 'LIKE'
-                          //     ),
-                          // ),
                       );
-                      // $uservar = wp_get_current_user();
-                      // echo '<pre>';
-                      // echo print_r($uservar);
-                      // echo '</pre>';
-                      // $args = array (
-                      //   'post_type' => 'post',
-                      //   'meta_query' => array (
-                      //     array (
-                      //         'key' => 'user',
-                      //         // 'value' => $uservar,
-                      //         'compare' => 'LIKE'
-                      //       )
-                      //     )
-                      //   );
                       $the_query = new WP_Query( $args );
 
                       if ( $the_query -> have_posts() ) {?>
@@ -77,8 +53,10 @@ get_header(); ?>
                                 echo "No rubric found";
                               }; ?>
                             </h4>
-                              <p>Coach:
-                                <?php $coach = wp_get_post_terms($post->ID, 'coach', array('fields' => 'all')); echo $coach[0]->name; ?> </p>
+                              <p>
+                                  <span class="text-primary"><?php $coach = wp_get_post_terms($post->ID, 'coach', array('fields' => 'all')); echo $coach[0]->name; ?></span> is coaching  
+                                  <span class="text-success"><?php $author = get_the_author_meta('display_name'); echo $author ?></span>
+                                </p>
                           </a>
                         <?php endwhile;?>
                       </div>
@@ -100,16 +78,16 @@ get_header(); ?>
                     <h3>My training sessions</h3></div>
                   <div class="panel-body">
                     <?php
-                        $current_user = wp_get_current_user();
                         $args = array(
                             'post_type' => 'session',
                             'posts_per_page' => 10,
-                            'author_name' => $current_user->user_login 
+                            'author_name' => $logged_in_user 
                         );
                         $the_query = new WP_Query( $args );
 
                         if ( $the_query -> have_posts() ) {?>
                       <div class="list-group">
+                      <!-- <div class="bs-callout bs-callout-info"> -->
                         <?php while ( $the_query -> have_posts() ) : $the_query -> the_post(); ?>
                         <a href="<?php echo get_permalink(); ?>" class="list-group-item">
                               <h4>
@@ -125,8 +103,10 @@ get_header(); ?>
                                 echo "No rubric found";
                               }; ?>
                             </h4>
-                              <p>Coach:
-                                <?php $coach = wp_get_post_terms($post->ID, 'coach', array('fields' => 'all')); echo $coach[0]->name; ?> </p>
+                              <p>
+                                  <span class="text-primary"><?php $coach = wp_get_post_terms($post->ID, 'coach', array('fields' => 'all')); echo $coach[0]->name; ?></span> is coaching  
+                                  <span class="text-success"><?php $author = get_the_author_meta('display_name'); echo $author ?></span>
+                                </p>
                           </a>
                         <?php endwhile;?>
                       </div>

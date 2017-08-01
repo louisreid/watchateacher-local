@@ -58,6 +58,44 @@ require get_template_directory() . '/inc/bootstrap-wp-navwalker.php';
 require get_template_directory() . '/inc/woocommerce.php';
 
 /**
-* load woocommerce functions.
+* load acf_form functions.
 */
 require get_template_directory() . '/inc/acf_form.php';
+
+/**
+* load CF7 functions.
+*/
+// require get_template_directory() . '/inc/cf7.php';
+require get_template_directory() . '/inc/cf7-fresh.php';
+
+
+if (!current_user_can(‘manage_options’)){
+define ( ‘BP_DISABLE_ADMIN_BAR’, true );}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

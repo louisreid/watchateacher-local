@@ -34,10 +34,18 @@ get_header(); ?>
           <div class="page-header">
             <?php 
             $rubric = get_field('pre_rubric'); 
-           ?>
-            <h1><?php echo $rubric->post_title ?>
+            $custom_rubric_title = get_field('custom_rubric_title');
+            $custom_rubric = get_field('custom_rubric');
+            if ($rubric) {?>
+            <h1><?php echo $rubric->post_title ?><br>
+            <?php } elseif ($custom_rubric_title) {?>
+            <h1><?php echo $custom_rubric_title ?><br>
+            <?php } ?>
             
-          <small>Session between <?php echo get_the_author(); ?> and <?php $users = get_field('coach'); echo $users['nickname']; ?></small>
+          <small>Session between <?php echo get_the_author(); ?> and <?php
+            $users = get_field('coach'); 
+            echo $users->name; 
+          ?></small>
           </h1>
           </div>
           <?php 
@@ -49,20 +57,24 @@ get_header(); ?>
             <div class="col-xs-12 col-sm-4">
               <div class="panel panel-primary">
                 <div class="panel-heading">
-                  <b>Rubric Preview:</b>
+                  <b><?php echo do_shortcode('[fa class="fa-bullseye"]'); ?> Rubric</b>
                 </div>
                 <div class="panel-body">
                   <p>
                     <?php 
-                      if ($rubric->post_excerpt){
-                          echo $rubric->post_excerpt;
+                      if ($rubric->post_content){
+                          echo $rubric->post_content;
+                      } elseif ($custom_rubric) {
+                          echo $custom_rubric;
                       } else { 
                           echo 'This rubric has no excerpt';
                       }
 
                     ?>
                   </p>
-                  <a href="<?php echo get_permalink($rubric->ID); ?>" class="btn btn-default">Full Rubric</a>
+                  <!-- <a href="<?php  
+                  // echo get_permalink($rubric->ID); 
+                  ?>" class="btn btn-default">Full Rubric</a>-->
                 </div>
               </div>
             </div>
@@ -70,6 +82,7 @@ get_header(); ?>
               <?php
               $args = array(
                   'post_type' => 'comment',
+                  'order' => 'ASC',
                   'posts_per_page' => 10,
                   'tax_query' => array(
                           array (
@@ -84,19 +97,27 @@ get_header(); ?>
               if ( $the_query->have_posts() ) {
                   while ( $the_query -> have_posts() ) : $the_query -> the_post(); 
                       // get_template_part( 'content', 'page')
-
-                      echo get_the_author().': '.get_field('text');
-                      echo "<br>";
-                      if (get_field('video_url')){
-                          echo 'Convert this to GOCHA later:'.'[gocha_video url="'.get_field('video_url').'" commentdisplaymode="0"]';
+                     ?> <div class="bs-callout bs-callout-primary"> <?php
+                      if (get_field('new_video_url')){
+                          ?>
+                            <h4>Video posted by: <?php $author = get_the_author_meta('display_name'); echo $author ?></h4>
+                          <?php
+                          echo do_shortcode('[gocha_video url="'.get_field('new_video_url').'"]');
+                      } elseif (get_field('exemplary_video')) {
+                          $selected_post = get_field('exemplary_video');
+                          $selected_post_custom_fields = get_post_custom($selected_post->ID);
+                          $selected_post_video_link = $selected_post_custom_fields[video_link][0];
+                          echo do_shortcode('[gocha_video url="'.$selected_post_video_link.'"]');
                       } else {
-                          echo 'No video here.';
+                          ?>
+                          <?php
+                          echo get_the_author().': '.get_field('message');
                       };
-                      echo '<hr>';
+                  ?>
+                    </div>
+                  <?php
 
                   endwhile;
-              } else {
-                  echo "No comments found";
               }
 
             ?>
@@ -112,7 +133,7 @@ get_header(); ?>
 
                     $new_post = array(
                         'post_id'            => 'comment', // Create a new post
-                        'field_groups'       => array(28), // Create post field group ID(s)
+                        'field_groups'       => array(465), // Create post field group ID(s)
                         'form'               => true,
                         // 'return'             => '%post_url%', // Redirect to new post url
                         'html_before_fields' => '',
@@ -135,4 +156,28 @@ get_header(); ?>
     <!-- Container end -->
   </div>
   <!-- Wrapper end -->
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">How to add video</h4>
+      </div>
+      <div class="modal-body">
+        <p>At present Watch A Teacher doesn't have the capability to upload video directly to the site.</p>
+        <p>Please follow the steps below to add video privately using YouTube.</p>
+        <ol>
+          <li>Download the YouTube app (<a href="https://itunes.apple.com/gb/app/youtube-watch-upload-and-share-videos/id544007664?mt=8">iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.google.android.youtube&hl=en_GB">Android</a>) on your smartphone</li>
+          <li>Record and upload the video using either the camera or the YouTube app on your phone, set the privacy to <?php echo do_shortcode('[fa class="fa-link"]') ?> Unlisted.</li>
+          <li>Paste the link to the uploaded video into the form on this page.</li>
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
   <?php get_footer(); ?>

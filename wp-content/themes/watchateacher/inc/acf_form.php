@@ -27,9 +27,9 @@ function do_pre_save_post( $post_id ) {
 			$unique = mktime();
 			$session_id = 'session_'.$unique;
 
-			$coach_tax = $_POST['acf']['field_58fb775b405b6'];
-			$coach_tax = get_term($coach_tax,'coach');
-			$coach_tax = $coach_tax->slug;
+			// $coach_tax = $_POST['acf']['field_58fb775b405b6'];
+			// $coach_tax = get_term($coach_tax,'coach');
+			// $coach_tax = $coach_tax->slug;
 
 			// GET THE VALUE OF THE COACH TAXONOMY FIELD AND PASS IT INTO THE ACTUAL COACH TAXONOMY KK
 
@@ -37,17 +37,14 @@ function do_pre_save_post( $post_id ) {
 			$post = array(
 				'post_type'     => 'session', // Your post type ( post, page, custom post type )
 				'post_status'   => 'publish', // (publish, draft, private, etc.)
-				// 'post_title' => $post_id . rand(10000,99999),
 				'post_title' => $unique,
-				// 'post_content' => 'This is the content'
-				// 'post_content' => $coach_username
-				'post_content' => $coach_tax
+				'post_content' => 'This is created by '.$coach_tax
 			);
 
 			// insert the post
 			$post_id = wp_insert_post( $post );
 			wp_set_post_terms( $post_id, $session_id, 'session_id' );
-			wp_set_post_terms( $post_id, $coach_tax, 'coach' );
+			// wp_set_post_terms( $post_id, $coach_tax, 'coach' );
 
 			// Save the fields to the post
 			do_action( 'acf/save_post' , $post_id );

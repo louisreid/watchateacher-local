@@ -49,9 +49,9 @@ get_header(); ?>
 
                         $new_post = array(
                             'post_id'            => 'session', // Create a new post
-                            'field_groups'       => array(23), // Create post field group ID(s)
+                            'field_groups'       => array(471), // Create post field group ID(s)
                             'form'               => true,
-                            // 'return'             => '%post_url%', // Redirect to new post url
+                            'return'             => '%post_url%', // Redirect to new post url
                             'html_before_fields' => '',
                             'html_after_fields'  => '',
                             'submit_value'       => 'Submit',

@@ -22,50 +22,48 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site">
-    
-    <!-- ******************* The Navbar Area ******************* -->
-    <div class="wrapper-fluid wrapper-navbar" id="wrapper-navbar">
-	
-        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
+<div id="page" class="hfeed site wrap">
 
-        <nav class="site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-                            
-            <div class="navbar navbar-inverse">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+<!--                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+ -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                
+                <a class="navbar-brand page-scroll header-logo" href="/">
+                    <img src="/wp-content/themes/watchateacher/img/logo-sm-white.png" alt="">
+                </a>
+                
+            </div>
 
-                <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                    <div class="row">
-
-                        <div class="col-xs-12">
-
-                            <div class="navbar-header">
-
-                                <!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-
-                                <!-- Your site title as branding in the menu -->
-                                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-
-                            </div>
-
-                        
-                            <!-- The WordPress Menu goes here -->
-                            <?php wp_nav_menu(
-                                    array(
-                                        'theme_location' => 'primary',
-                                        // 'container_class' => 'collapse navbar-collapse navbar-responsive-collapse',
-                                        'menu_class' => 'nav navbar-nav',
-                                        'fallback_cb' => '',
-                                        'menu_id' => 'main-menu',
-                                        'walker' => new wp_bootstrap_navwalker()
-                                    )
-                            ); ?>
+                             <!-- The WordPress Menu goes here -->
+                            <?php 
+                                if (is_user_logged_in()){
+                                    wp_nav_menu(
+                                            array(
+                                                'theme_location' => 'primary',
+                                                // 'container_class' => 'collapse navbar-collapse navbar-responsive-collapse',
+                                                'menu_class' => 'nav navbar-nav',
+                                                'fallback_cb' => '',
+                                                'menu_id' => 'main-menu',
+                                                'walker' => new wp_bootstrap_navwalker()
+                                            )
+                                    ); 
+                                }
+                            ?>
                             <ul class="nav navbar-nav navbar-right">
                                 <?php 
                                     if (is_user_logged_in()){
@@ -76,25 +74,21 @@
                                 <li>
                                 <?php 
                                     if (is_user_logged_in()) {
-                                       echo '<a href="'.wp_logout_url().'">Log Out</a>';
+                                       echo '<a href="'.wp_logout_url().'">log out</a>';
                                     } else {
-                                       echo '<a href="'.wp_login_url().'">Log In</a>';
+                                       // echo '<a href="'.wp_login_url().'">log in</a>';
+                                       echo '<a href="'.get_site_url().'/login/">log in</a>';
                                    };
                                  ?>
                                 </li>
                             </ul>
-
-                        </div> <!-- .col-md-11 or col-md-12 end -->
-
-                    </div> <!-- .row end -->
-
-                </div> <!-- .container -->
-                
-            </div><!-- .navbar -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    
             
-        </nav><!-- .site-navigation -->
-        
-    </div><!-- .wrapper-navbar end -->
 
 
 
